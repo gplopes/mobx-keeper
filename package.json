@@ -2,17 +2,33 @@
   "name": "mobx-keeper",
   "version": "0.0.3",
   "description": "A directly and easy way to keep mobx observable persistent.",
-  "main": "index.js",
+  "main": "./lib/mobx-keeper.min.js",
+  "umd:main": "./lib/mobx-keeper.min.js",
+  "module": "./lib/mobx-keeper.min.js",
+  "jsnext:main": "./lib/mobx-keeper.min.js",
   "scripts": {
     "test": "jest",
-    "build": "npm run lint && babel ./src -d ./lib",
+    "build": "npm run lint && webpack --env dev && webpack --env build && npm test",
+    "serve": "webpack --progress --colors --watch --env dev",
+    "prepublishOnly": "npm run build",
     "lint": "eslint ./src"
+  },
+  "jest": {
+    "bail": true,
+    "browser": true,
+    "verbose": true,
+    "collectCoverage": true
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gplopes/mobx-keeper.git"
   },
-  "keywords": [],
+  "keywords": [
+    "mobx",
+    "keeper",
+    "localstorage",
+    "persist"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -22,11 +38,17 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-jest": "^22.0.4",
+    "babel-plugin-add-module-exports": "^0.2.1",
     "babel-preset-env": "^1.6.1",
     "eslint": "^4.14.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
     "jest": "^22.0.4",
-    "regenerator-runtime": "^0.11.1"
+    "regenerator-runtime": "^0.11.1",
+    "webpack": "^3.10.0",
+    "yargs": "^10.0.3"
+  },
+  "dependencies": {
+    "mobx": "^3.4.1"
   }
 }
