@@ -4,7 +4,8 @@
   "description": "A directly and easy way to keep mobx observable persistent.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel ./src -d ./lib"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/gplopes/mobx-keeper/issues"
   },
-  "homepage": "https://github.com/gplopes/mobx-keeper#readme"
+  "homepage": "https://github.com/gplopes/mobx-keeper#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  }
 }
