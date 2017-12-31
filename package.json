@@ -1,0 +1,20 @@
+{
+  "name": "mobx-keeper",
+  "version": "0.0.3",
+  "description": "A directly and easy way to keep mobx observable persistent.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gplopes/mobx-keeper.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gplopes/mobx-keeper/issues"
+  },
+  "homepage": "https://github.com/gplopes/mobx-keeper#readme"
+}
