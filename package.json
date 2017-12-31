@@ -4,7 +4,7 @@
   "description": "A directly and easy way to keep mobx observable persistent.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "npm run lint && babel ./src -d ./lib",
     "lint": "eslint ./src"
   },
@@ -21,9 +21,12 @@
   "homepage": "https://github.com/gplopes/mobx-keeper#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-jest": "^22.0.4",
     "babel-preset-env": "^1.6.1",
     "eslint": "^4.14.0",
     "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.8.0"
+    "eslint-plugin-import": "^2.8.0",
+    "jest": "^22.0.4",
+    "regenerator-runtime": "^0.11.1"
   }
 }
