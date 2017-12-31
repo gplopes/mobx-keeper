@@ -1,6 +1,6 @@
 {
   "name": "mobx-keeper",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A directly and easy way to keep mobx observable persistent.",
   "main": "./lib/mobx-keeper.min.js",
   "umd:main": "./lib/mobx-keeper.min.js",

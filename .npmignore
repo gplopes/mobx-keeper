@@ -1,5 +1,15 @@
 .nyc_output/
 coverage/
 node_modules/
+coverage/
+src/
+test/
+.babelrc
+.editorconfig
+.eslintrc.json
+.git
+
 .idea/
 .vscode/
+
+webpack.config.js

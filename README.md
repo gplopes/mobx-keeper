@@ -2,6 +2,10 @@
 
 A directly and easy way to keep mobx observable persistent.
 
+``` typescript
+  npm install --save mobx-keeper
+```
+
 ## Usage
 
 ``` typescript
