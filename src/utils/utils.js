@@ -7,7 +7,7 @@ export const storageName = target => target.constructor.name;
 
 // Mobx Utils
 export function trackObservable({ storage, target, key }) {
-  reaction(
+  return reaction(
     () => target[key],
     value => StorageManager.update({ storage, key, value }),
   );

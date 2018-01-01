@@ -8,16 +8,15 @@ const StorageManager = {
   },
   get(target, items) {
     const objItems = {};
-    Object.keys(items).map(function mapKeys(key) {
+    Object.keys(items).map((key) => {
       const localValue = keeperStorage.get(target, key);
 
       if (!localValue) {
         this.save(target, { [key]: items[key] });
-        objItems.items[key] = items[key];
-        return 0;
+        objItems[key] = items[key];
+      } else {
+        objItems[key] = localValue;
       }
-      objItems[key] = localValue;
-      return 0;
     });
 
     return objItems;

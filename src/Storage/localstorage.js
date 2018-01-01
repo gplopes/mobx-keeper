@@ -22,8 +22,6 @@ function get(storageName, itemKey) {
     if (storageState) {
       return storageState[itemKey];
     }
-
-    console.error('[keeper]: No item found');
   } catch (e) {
     console.error(`[keeper]: ${e}`);
     return false;
