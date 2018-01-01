@@ -17,6 +17,8 @@ const StorageManager = {
       } else {
         objItems[key] = localValue;
       }
+
+      return 0;
     });
 
     return objItems;

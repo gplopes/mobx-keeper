@@ -1,6 +1,6 @@
 {
   "name": "mobx-keeper",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A directly and easy way to keep mobx observable persistent.",
   "main": "./lib/mobx-keeper.min.js",
   "umd:main": "./lib/mobx-keeper.min.js",
@@ -18,7 +18,9 @@
     "browser": true,
     "verbose": true,
     "collectCoverage": true,
-    "setupFiles": ["jest-localstorage-mock"]
+    "setupFiles": [
+      "jest-localstorage-mock"
+    ]
   },
   "repository": {
     "type": "git",
@@ -28,7 +30,12 @@
     "mobx",
     "keeper",
     "localstorage",
-    "persist"
+    "persist",
+    "variable",
+    "save",
+    "localStorage",
+    "storage",
+    "javascript"
   ],
   "author": "",
   "license": "ISC",
@@ -39,6 +46,7 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-jest": "^22.0.4",
+    "babel-loader": "^7.1.2",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-preset-env": "^1.6.1",
     "eslint": "^4.14.0",
