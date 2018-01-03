@@ -1,29 +1,67 @@
-# MobX Keeper
+![mobx-keeper](https://image.ibb.co/fL1zew/KEEPER_logo.png)
 
-A directly and easy way to keep mobx observable persistent.
+A directly and easy way to keep mobx observable persistent using localstorage
 
-``` typescript
-  npm install --save mobx-keeper
+[![forthebadge](http://forthebadge.com/images/badges/check-it-out.svg)](http://forthebadge.com)
+[![forthebadge](http://forthebadge.com/images/badges/uses-js.svg)](http://forthebadge.com)
+
+[![npm version](https://badge.fury.io/js/mobx-keeper.svg)](https://badge.fury.io/js/mobx-keeper)
+[![Build Status](https://travis-ci.org/gplopes/mobx-keeper.svg?branch=master)](https://travis-ci.org/gplopes/mobx-keeper)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=shields)](http://makeapullrequest.com)
+
+
+
+## Getting Started
+
+If you are using mobx already it should be easy. Initialize the variables with **mobx-keeper**, it shouldn't interfere the app store and work out of the box.
+
+### Prerequisites
+
+You will need to install mobx (of course) and in case you want to use decorator, config your webpack to support it.
+
+### Installing
+
+This module uses basic localStorage to keep the variables persistent, so it should be easy and painless :)
+
+
+```
+npm install --save mobx-keeper
 ```
 
-## Usage
+And then import your project
 
-``` typescript
+```js
 import { observable } from 'mobx';
 import { keep, createKeeper } from 'mobx-keeper';
 
+
 class Store {
-  @keep keeperDecorator = 'Keeper observable';
-  @observable nonKeeper = 'I am just Mobx observable!';
+  @keep keepz = 'my keep';
+  @observable mobxObserver = 'non keeper';
+
   constructor() {
     createKeeper(this, {
-      anotherKeeper: 'Keeper 2 observable!',
+      keepzTwo: 'my 2 keep',
     });
   }
 }
-
 ```
 
-1. That's all, all the **Keepers** variables will work as a normal MobX variables and can be use as such.
+## Running the tests
 
-2. This module uses basic localStorage to keep the variables persistent.
+Project uses [jest](https://facebook.github.io/jest/) for tests
+
+```
+npm test
+```
+
+## Built With
+
+* [Wepback](https://github.com/webpack/webpack)
+* [Mobx](https://mobx.js.org/) 
+
+## Contributing
+
+Feel free to give PR, Comment, feedback :)
+
+
