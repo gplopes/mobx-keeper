@@ -62,6 +62,6 @@ npm test
 
 ## Contributing
 
-Feel free to give PR, Comment, feedback :)
+PR, Comments & feedback are welcome :)
 
 
