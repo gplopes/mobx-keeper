@@ -33,7 +33,7 @@ export const isLocalStorageAvailable = () => {
 export function trackObservable({ storage, target, key }) {
   return reaction(
     () => target[key],
-    value => StorageManager.update({ storage, key, value })
+    value => StorageManager.update({ storage, key, value }),
   );
 }
 
