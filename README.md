@@ -55,10 +55,18 @@ Project uses [jest](https://facebook.github.io/jest/) for tests
 npm test
 ```
 
+## Running the example / playground
+
+A playground with a more visual example
+
+```
+npm run example
+```
+
 ## Built With
 
 * [Wepback](https://github.com/webpack/webpack)
-* [Mobx](https://mobx.js.org/) 
+* [Mobx](https://mobx.js.org/)
 
 ## Contributing
 

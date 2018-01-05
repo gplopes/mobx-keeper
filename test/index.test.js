@@ -4,6 +4,7 @@ import {
   descriptorModifier,
   trackObservable,
   storageName,
+  isLocalStorageAvailable,
 } from '../src/utils/utils';
 import StorageManager from '../src/Storage/StorageManager';
 import { keep, createKeeper } from '../src/index';
@@ -22,6 +23,14 @@ class Keeper {
 }
 
 const KeeperInstance = new Keeper();
+
+/*
+ *  isLocalStorageAvailable()
+ *  it check whether the localstorage is available or not.
+ * */
+test('isLocalStorageAvailable() should return true or false', () => {
+  expect(isLocalStorageAvailable()).toBe(true);
+});
 
 /*
  * StorageName()
