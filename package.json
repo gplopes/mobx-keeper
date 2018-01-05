@@ -1,6 +1,6 @@
 {
   "name": "mobx-keeper",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "description": "A directly and easy way to keep mobx observable persistent.",
   "main": "./lib/mobx-keeper.min.js",
   "umd:main": "./lib/mobx-keeper.min.js",
@@ -59,12 +59,10 @@
     "jest-localstorage-mock": "^2.1.0",
     "regenerator-runtime": "^0.11.1",
     "webpack": "^3.10.0",
-    "yargs": "^10.0.3"
+    "yargs": "^10.0.3",
+    "webpack-dev-server": "^2.9.7"
   },
   "dependencies": {
-    "http-server": "^0.10.0",
-    "mobx": "^3.4.1",
-    "webpack-dev-server": "^2.9.7",
-    "webpack-devserver": "0.0.6"
+    "mobx": "^3.4.1"
   }
 }
