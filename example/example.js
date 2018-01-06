@@ -15,6 +15,8 @@ class myStore {
   }
 }
 
+window.arrayKeep = keep('arrayKeep', ['hello', 'world']);
+window.simpleKeep = keep('simpleKeep', 'I also work');
 
 const store = window.store = new myStore();
 
@@ -24,9 +26,16 @@ const el = document.getElementById('keeper');
 const disposer = autorunAsync(() => {
   const html = `
     <ul>
+      <li><h3>Class Variables</h3>
       <li>KeepZ: <strong>${store.keepZ}</strong></li>
       <li>nonKeeper: <strong>${store.nonKeeper}</strong></li>
       <li>KeepMe: <strong>${store.keepMe}</strong></li>
+    </ul>
+    <br/>
+    <ul>
+      <li><h3>Simple Variables</h3>
+      <li>arrayKeep: <strong>${window.arrayKeep}</strong></li>
+      <li>simpleKeep: <strong>${window.simpleKeep}</strong></li>
     </ul>
   `;
 

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`descriptorModifier() should return modifier descriptor object: [object Object] 1`] = `
+exports[`@ Utils descriptorModifier() should return modifier descriptor object: [object Object] 1`] = `
 Object {
   "configurable": true,
   "initializer": [Function],

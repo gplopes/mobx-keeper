@@ -8,11 +8,12 @@
   "jsnext:main": "./lib/mobx-keeper.min.js",
   "scripts": {
     "test": "jest",
+    "test:watch": "jest --watch",
     "build": "npm run lint && webpack --env dev && webpack --env build && npm test",
     "serve": "webpack --progress --colors --watch --env dev",
     "example": "webpack-dev-server --config webpack.config.example.js --content-base ./example -w",
     "prepublishOnly": "npm run build",
-    "lint": "eslint ./src"
+    "lint": "eslint ./src --fix"
   },
   "jest": {
     "bail": true,
