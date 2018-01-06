@@ -1,6 +1,25 @@
 /* global window */
-import { reaction, extendObservable } from 'mobx';
+import {
+  reaction,
+  extendObservable,
+  observe,
+  isObservableObject,
+  isObservableMap,
+  isObservableArray,
+} from 'mobx';
 import StorageManager from '../Storage/StorageManager';
+
+/*
+ * isObservableValue
+ * check if the observable is type simple value
+ * */
+function isObservableValue(target) {
+  return (
+    !isObservableMap(target) &&
+    !isObservableObject(target) &&
+    !isObservableArray(target)
+  );
+}
 
 /*
  * Delay
@@ -28,15 +47,42 @@ export const isLocalStorageAvailable = () => {
 };
 
 /*
- *  Mobx Utils
+ * Track Observable from class
+ * and apply reaction when it updates
  * */
-export function trackObservable({ storage, target, key }) {
+function trackObservableFromClass({ storage, target, key }) {
   return reaction(
     () => target[key],
     value => StorageManager.update({ storage, key, value }),
   );
 }
 
+/*
+ * Track Observable from variable
+ * and observe when it changes
+ * */
+function trackObservableFromVariable({ storage, selfTarget, key }) {
+  return observe(selfTarget, (change) => {
+    const value = isObservableValue(change.object) ? change.newValue : change.object;
+    StorageManager.update({ storage, key, value });
+  });
+}
+
+/*
+ * MAIN:
+ * Track Observables from class
+ * or outside class (global variables)
+ * */
+export function trackObservable(params) {
+  return params.selfTarget !== undefined
+    ? trackObservableFromVariable(params)
+    : trackObservableFromClass(params);
+}
+
+/*
+ * Modify descriptor from decorator
+ * (apply tracker and observable)
+ * */
 export function descriptorModifier(descriptor, key, value) {
   function initializer() {
     const storage = storageName(this);
