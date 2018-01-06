@@ -5,6 +5,8 @@
 import { observable, action, autorunAsync } from 'mobx';
 import { keep, createKeeper } from '../src/index';
 
+
+// Class Example
 class myStore {
   @keep keepZ = 'Hello Keeper';
   @observable nonKeeper = 'I am not a keeper!';
@@ -14,11 +16,21 @@ class myStore {
     });
   }
 }
+const store = window.store = new myStore();
 
+
+// Variable Examples
 window.arrayKeep = keep('arrayKeep', ['hello', 'world']);
 window.simpleKeep = keep('simpleKeep', 'I also work');
 
-const store = window.store = new myStore();
+
+// Function Example
+function MyObject() {
+  createKeeper(this, { keep: 'test' });
+}
+
+window.myObject = new MyObject();
+
 
 
 // Print Html

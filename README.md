@@ -47,12 +47,33 @@ class Store {
 }
 ```
 
+```js
+function MyObject() {
+  createKeeper(this, { keep: 'test' });
+}
+
+const myObject = new MyObject();
+```
+
+#### you can use it also outside the classes and object same as mobx.observable
+
+keep(varName, value)
+
+```js
+ const myKeepValue = keep('myKeepValue', 'value');
+ const myKeepArray = keep('myKeepArray', [1,2,3]);
+```
+
+*just remember to use myKeepValue.set('newValue') for this case* see: https://mobx.js.org/refguide/observable.html
+
+
 ## Running the tests
 
 Project uses [jest](https://facebook.github.io/jest/) for tests
 
 ```
-npm test
+> npm test
+> npm run test:watch
 ```
 
 ## Running the example / playground
@@ -60,7 +81,7 @@ npm test
 A playground with a more visual example
 
 ```
-npm run example
+> npm run example
 ```
 
 ## Built With
