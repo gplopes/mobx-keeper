@@ -15,21 +15,6 @@ beforeEach(() => {
   localStorage.clear();
 });
 
-/*
- * Mockup
-* */
-// class Keeper {
-//   @keep keepZ = 'test observable';
-//   constructor() {
-//     this.keeper = 'keeper';
-//     createKeeper(this, {
-//       keepIn: 'Created Keeper',
-//     });
-//   }
-// }
-
-// const KeeperInstance = new Keeper();
-
 
 describe('@ Helpers', () => {
   /*
