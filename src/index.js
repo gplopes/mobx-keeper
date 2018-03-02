@@ -51,7 +51,7 @@ function keepValue(key, value) {
     trackObservable({ storage: VARIABLES_STORAGE, key, selfTarget: observableItem });
     return observableItem;
   }
-  return value;
+  return observable(value);
 }
 
 
