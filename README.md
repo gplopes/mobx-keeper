@@ -8,7 +8,7 @@ An easy way to keep mobx observable persistent and rehydrate.
 [![npm version](https://badge.fury.io/js/mobx-keeper.svg)](https://badge.fury.io/js/mobx-keeper)
 [![Build Status](https://travis-ci.org/gplopes/mobx-keeper.svg?branch=master)](https://travis-ci.org/gplopes/mobx-keeper)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=shields)](http://makeapullrequest.com)
-[![npm downloads](https://img.shields.io/npm/dm/mobx-keeper.svg?style=flat-square)](https://www.npmjs.com/package//mobx-keeper)
+[![npm downloads](https://img.shields.io/npm/dm/mobx-keeper.svg?style=flat-square)](https://www.npmjs.com/package/mobx-keeper)
 
 
 ## Quickstart
